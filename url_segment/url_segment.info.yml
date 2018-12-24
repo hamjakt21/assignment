@@ -1,0 +1,10 @@
+name: URL segment
+description: This is custom module with custom block where you can print second URL segment.
+core: 8.x
+type: module
+package: Custom
+dependencies:
+  - drupal:block
+  
+# Project information
+version: '8.6.4'

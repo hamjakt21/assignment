@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file is for regular hooks.
+ * @author Hamja <hamja.kutarvadliwala@infobeans.com>
+ */
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * hook_help()
+ * @param string $route_name
+ * @param RouteMatchInterface $route_state
+ * @return string
+ */
+function url_segment_help($route_name, RouteMatchInterface $route_state) {
+
+  $content = '';
+  switch ($route_name) {
+    case 'help.page.url_segment':
+      $content = '<h3>' . t('About module') . '</h3>';
+      $content .= '<p>' . t('This is custom module with custom block where you can add block in your <a href="/admin/structure/block">block layout</a> and print the second segment of URL.') . '</p>';
+
+      break;
+  }
+  return $content;
+}
